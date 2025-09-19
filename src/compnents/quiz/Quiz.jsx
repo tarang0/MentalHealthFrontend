@@ -224,7 +224,7 @@ const Quiz = () => {
     setLoading(true);
     try {
       const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-      const prompt = You are a mental health and wellness assistant. Analyze the following quiz responses and provide insights.\n\n${questions.map((q, i) => `${i + 1}. ${q}: ${answers[i]}).join("\n")}`;
+      const prompt = `You are a mental health and wellness assistant. Analyze the following quiz responses and provide insights.\n\n${questions.map((q, i) => `${i + 1}. ${q}: ${answers[i]}`).join("\n")}`;
 
       const result = await model.generateContent(prompt);
       const response = await result.response;
@@ -261,7 +261,7 @@ const Quiz = () => {
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <p className="text-xl mb-4 text-gray-700">{${currentQuestion + 1}. ${questions[currentQuestion]}}</p>
+              <p className="text-xl mb-4 text-gray-700">{`${currentQuestion + 1}. ${questions[currentQuestion]}`}</p>
               <div className="space-y-3">
                 {options.map((option, optionIndex) => (
                   <motion.button
