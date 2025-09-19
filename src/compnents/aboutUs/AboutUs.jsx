@@ -48,7 +48,7 @@ const AboutUs = () => {
                   </ul>
               </div>
           </div> 
-          <div class="items-center rounded-xl shadow sm:flex dark:border-gray-700 mb-6" style={{ background: 'linear-gradient(to right, #D1D5DB, #E5E7EB, #F3F4F6)' }}>
+          {/* <div class="items-center rounded-xl shadow sm:flex dark:border-gray-700 mb-6" style={{ background: 'linear-gradient(to right, #D1D5DB, #E5E7EB, #F3F4F6)' }}>
               <a href="#">
                 <img class="w-1/2 h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="/images/Neha.jpg" alt="Manan Hingorani" />
               </a>
@@ -83,7 +83,7 @@ const AboutUs = () => {
                 
                   </ul>
               </div>
-          </div> 
+          </div>  */}
           <div class="items-center rounded-xl shadow sm:flex dark:border-gray-700 mb-6" style={{ background: 'linear-gradient(to right, #D1D5DB, #E5E7EB, #F3F4F6)' }}>
               <a href="#">
                 <img class="w-1/2 h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="/images/tarang.jpg" alt="Manan Hingorani" />
@@ -120,7 +120,7 @@ const AboutUs = () => {
                   </ul>
               </div>
           </div> 
-          <div class="items-center rounded-xl shadow sm:flex dark:border-gray-700 mb-6" style={{ background: 'linear-gradient(to right, #D1D5DB, #E5E7EB, #F3F4F6)' }}>
+          {/* <div class="items-center rounded-xl shadow sm:flex dark:border-gray-700 mb-6" style={{ background: 'linear-gradient(to right, #D1D5DB, #E5E7EB, #F3F4F6)' }}>
               <a href="#">
                 <img class="w-1/2 h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="/images/manju.jpg" alt="Manan Hingorani" />
               </a>
@@ -155,7 +155,7 @@ const AboutUs = () => {
                 
                   </ul>
               </div>
-          </div> 
+          </div>  */}
           <div class="items-center rounded-xl shadow sm:flex dark:border-gray-700 mb-6" style={{ background: 'linear-gradient(to right, #D1D5DB, #E5E7EB, #F3F4F6)' }}>
               <a href="#">
                 <img class="w-1/2 h-1/2 rounded-lg sm:rounded-none sm:rounded-l-lg" src="/images/Jiya.jpg" alt="Manan Hingorani" />
