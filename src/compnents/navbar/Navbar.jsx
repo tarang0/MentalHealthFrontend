@@ -148,6 +148,51 @@ const Navbar = () => {
             )}
           </div>
         </nav>
+         {mobileMenuOpen && (
+          <div className="lg:hidden" role="dialog" aria-modal="true">
+            <div className="fixed inset-0 z-50" />
+            <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-pink-100 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+              <div className="flex items-center justify-between">
+                <a href="/" className="-m-1.5 p-1.5">
+                  <span className="sr-only">Your Company</span>
+                  <img className="h-8 w-auto" src="/images/meditation.jpg" alt="" />
+                </a>
+                <button
+                  type="button"
+                  className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                  onClick={toggleMobileMenu}
+                >
+                  <span className="sr-only">Close menu</span>
+                  <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div className="mt-6 flow-root">
+                <div className="-my-6 divide-y divide-gray-500/10">
+                  <div className="space-y-2 py-6">
+                    <a href="#" onClick={(e) => handleRestrictedClick(e, `/${user}/mood`)} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-pink-200">Mood Tracker</a>
+                    <a href="#" onClick={(e) => handleRestrictedClick(e, `/${user}/therapist`)} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-pink-200">AI Therapist</a>
+                    <a href="#" onClick={(e) => handleRestrictedClick(e, `/${user}/quiz`)} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-pink-200">Quiz</a>
+                    <a href="#" onClick={(e) => handleRestrictedClick(e, `/${user}/anonymoussharing`)} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-pink-200">Anonymous Sharing</a>
+                    <a href="/aboutus" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-pink-200">About Us</a>
+                  </div>
+                  <div className="py-6">
+                    {isLoggedIn ? (
+                        <div>
+                            <a href={`/${user}/profile`} className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-pink-200">Your Profile</a>
+                            <a onClick={handleDelete} href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-pink-200">Delete Profile</a>
+                            <a onClick={(e) => handleLogout(e)} href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-pink-200">Sign out</a>
+                        </div>
+                    ) : (
+                      <a href="/login" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-pink-200">Log in</a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </header>
       {/* Delete Profile Modal */}
       {showDeleteModal && (
