@@ -168,7 +168,6 @@
 // };
 
 // export default Quiz;
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../navbar/Navbar";
@@ -230,8 +229,8 @@ const Quiz = () => {
       const response = await result.response;
       let text = await response.text();
 
-      // Replace word with <strong>word</strong>
-      text = text.replace(/\(.?)\*/g, "<strong>$1</strong>");
+      // Replace *word* with <strong>word</strong>
+      text = text.replace(/\*(.*?)\*/g, "<strong>$1</strong>");
 
       setResult(text);
     } catch (error) {
